@@ -82,10 +82,68 @@ import torch
 # #dim = 0 => 첫번째 차원, 즉 행, 
 # print(t.mean(dim=0))
 
-t = torch.FloatTensor([[1, 2], [3, 4]])
-print(t)
-print(t.max()) # Returns one value: max
-print(t.max(dim=0)) # Returns two values: max and argmax
-print('Max: ', t.max(dim=0)[0])
-print('Argmax: ', t.max(dim=0)[1])
+# t = torch.FloatTensor([[1, 2], [3, 4]])
+# print(t)
+# print(t.max()) # Returns one value: max
+# print(t.max(dim=0)) # Returns two values: max and argmax
+# print('Max: ', t.max(dim=0)[0])
+# print('Argmax: ', t.max(dim=0)[1])
+
+import numpy
+
+# t = numpy.array([[[0, 1, 2],
+#                [3, 4, 5]],
+#               [[6, 7, 8],
+#                [9, 10, 11]]])
+
+# ft = torch.FloatTensor(t)
+# print(ft.shape)
+# print(ft.view([-1, 3])) # ft라는 텐서를 (?, 3)의 크기로 변경
+# print(ft.view([-1, 3]).shape)
+
+# print(ft.view([-1, 1, 3]))
+# print(ft.view([-1, 1, 3]).shape)
+
+# ft = torch.FloatTensor([[0],[1],[2]])
+# print(ft)
+# print(ft.shape)
+
+# print(ft.squeeze())     #1인 차원을 제거
+# print(ft.squeeze().shape)
+
+# ft = torch.Tensor([0, 1, 2])
+# print(ft.shape)
+# print(ft.unsqueeze(0))
+# print(ft.unsqueeze(0).shape)
+
+# lt = torch.LongTensor([1,2,3,4])
+# print(lt)
+# print(lt.float())
+
+# bt = torch.ByteTensor([True,False,True,False])
+# print(bt)
+# print(bt.long())
+
+# x = torch.FloatTensor([[1, 2], [3, 4]])
+# y = torch.FloatTensor([[5, 6], [7, 8]])
+# print(torch.cat([x,y],dim=0))
+# print(torch.cat([x,y],dim=1))
+
+# x = torch.FloatTensor([1, 4])
+# y = torch.FloatTensor([2, 5])
+# z = torch.FloatTensor([3, 6])
+# print(torch.stack([x, y, z]))
+# print(torch.stack([x, y, z],dim=1))
+
+# x = torch.FloatTensor([[0, 1, 2], [2, 1, 0]])
+# print(torch.ones_like(x))
+# print(torch.zeros_like(x))
+
+# x = torch.FloatTensor([[1, 2], [3, 4]])
+# print(x.mul(2.))
+# print(x)
+
+# x = torch.FloatTensor([[1, 2], [3, 4]])
+# print(x.mul_(2.)) #기존의 값 덮어쓰기
+# print(x)
 
