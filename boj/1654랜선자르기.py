@@ -15,4 +15,4 @@ while (s<e):
     else:
         e = mid
 
-print(s,e)
+print(s-1)
