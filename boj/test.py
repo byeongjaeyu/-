@@ -1,1 +1,1 @@
-print(int("0001"))
+print(None+1)

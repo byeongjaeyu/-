@@ -1,5 +1,6 @@
-n,m = map(int, input().split())
-num_lst = [list(map(int, input().split())) for _ in range(n)]
+import sys
+n,m = map(int, sys.stdin.readline().split())
+num_lst = [list(map(int, sys.stdin.readline().split())) for _ in range(n)]
 
 def DFS(i1:int,i2:int):
     global ans, cnt, s1
