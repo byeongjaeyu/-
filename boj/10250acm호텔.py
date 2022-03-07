@@ -1,10 +1,10 @@
-for test in range(int(input())):
-    h,w,n = map(int, input().split())
-    f = str(n%h)
-    room = (n//h)+1
-    ans = f
-    if room<10:
-        ans += '0{}'.format(str(room))
-    else:
-        ans += str(room)
-    print(ans)
+t = int(input())
+
+for i in range(t):
+    h, w, n = map(int, input().split())
+    num = n//h + 1
+    floor = n % h
+    if n % h == 0:
+        num = n//h
+        floor = h
+    print(f'{floor*100+num}')
