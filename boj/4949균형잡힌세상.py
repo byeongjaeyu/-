@@ -29,5 +29,8 @@ while True:
                 print('no')
                 break
     else:
-        print('yes')
+        if not stack:
+            print('yes')
+        else:
+            print('no')
         

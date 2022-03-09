@@ -1,5 +1,5 @@
 n = int(input())
-arr = [0]*5
+arr = [0]*n
 for i in range(n):
     x,y = map(int, input().split())
     arr[i] = [x,y]
