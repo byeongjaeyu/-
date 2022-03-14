@@ -1,11 +1,3 @@
-from numpy import Inf
-
-
-def plus(x,y):
-    return x+y
-def minus(x,y):
-    return x-y
-
 def calculate(sts):
     s = sts.split('+')
     sts_sum = 0
