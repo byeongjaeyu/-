@@ -1,1 +1,3 @@
-print(None+1)
+def sol():
+    return
+print(sol())
