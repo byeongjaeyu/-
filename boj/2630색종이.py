@@ -32,10 +32,15 @@ def solution(x,y,n):
                 else:
                     n0 += 1
 
-n = int(input())
-map_lst = [list(map(int, input().split())) for _ in range(n)]
+import sys
+n = int(sys.stdin.readline())
+map_lst = [list(map(int, sys.stdin.readline().split())) for _ in range(n)]
 n0 = 0
 n1 = 0
-solution(0,0,n)
+val = solution(0,0,n)
+if val == 0:
+    n0 += 1
+elif val == 1:
+    n1 += 1
 print(n0)
 print(n1)

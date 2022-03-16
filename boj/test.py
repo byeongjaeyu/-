@@ -1,3 +1,1 @@
-def sol():
-    return
-print(sol())
+print(type({1,2,3}))
