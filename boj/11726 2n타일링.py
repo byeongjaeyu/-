@@ -1,4 +1,3 @@
-from math import factorial
 n = int(input())
 dp = [0]*(n+1)
 dp[1] = 1

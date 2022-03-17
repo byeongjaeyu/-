@@ -20,7 +20,7 @@ for i in range(1,n+1):
     q = deque()
     if visited[i] == 0:
         q.append(i)
-        visited[i] = 1
+        visited[i] = i
         solution()
 
 print(len(set(visited))-1)
