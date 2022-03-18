@@ -1,14 +1,20 @@
 n = int(input())
-cur_sum = 0
-cnt = 0
-for i in range(int(n**0.5)+1,0,-1):
-    if cur_sum == n:
-        break
+dp = [0]*(50001)
+dp[0] = 0xffffff
+dp[1] = 1
+for i in range(2,50001):
+    dp_min = 50000
+    minus_sq = 1
     while True:
-        if cur_sum + i**2 > n:
+        idx = i-(minus_sq**2)
+        if idx == 0:
+            dp_min = 0
+            break
+        elif idx < 0:
             break
         else:
-            cur_sum += i**2
-            cnt += 1
+            dp_min = min(dp[idx],dp_min)
+            minus_sq += 1
+    dp[i] = dp_min + 1
 
-print(cnt)
+print(dp[n])
