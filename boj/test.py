@@ -1,1 +1,5 @@
-print(type({1,2,3}))
+def sol():
+    return
+
+a,b = sol()
+print(a,b)
