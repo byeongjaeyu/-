@@ -11,22 +11,22 @@ else:
         visited[lie_lst[i]] = 1
         q.append(lie_lst[i])
 
-party_lst = [list(map(int ,input().split())) for _ in range(m)]
+    party_lst = [list(map(int ,input().split())) for _ in range(m)]
 
-while q:
-    p = q.popleft()
+    while q:
+        p = q.popleft()
+        for party in party_lst:
+            if p in party[1:]:
+                for ppl in party[1:]:
+                    if not visited[ppl]:
+                        q.append(ppl)
+                        visited[ppl] = 1
+    ans = 0
     for party in party_lst:
-        if p in party[1:]:
-            for ppl in party[1:]:
-                if not visited[ppl]:
-                    q.append(ppl)
-                    visited[ppl] = 1
-ans = 0
-for party in party_lst:
-    for ppl in party[1:]:
-        if visited[ppl] == 1:
-            break
-    else:
-        ans += 1
+        for ppl in party[1:]:
+            if visited[ppl] == 1:
+                break
+        else:
+            ans += 1
 
-print(ans)
+    print(ans)
