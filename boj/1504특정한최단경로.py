@@ -6,25 +6,29 @@ for i in range(e):
     uv_lst[v2].append([v1,c])
 
 musts = list(map(int, input().split()))
-for i in range(len(musts)):
-    num = musts[i]
-    musts[i] = [num,0]
 
 
-value = [800000]*(n+1)
-value[1] = 0
 
-from collections import deque
-q = deque()
-q.append([1,0,0])
-
-while q:
-    p = q.popleft()
-
-    for must in musts:
-        if p == must[0]:
-            must[1] = 1
-            break
+def dijkstra(s,e):
+    q = deque()
+    q.append(s)
+    value = [800001]*(n+1)
+    value[s] = 0
+    while q:
+        p = q.popleft()
+        for line in uv_lst[p]:
+            if value[line[0]] > value[p] + line[1]:
+                value[line[0]] = value[p] + line[1]
+                q.append(line[0])
+    return value[e]
     
-    for line in uv_lst[p]:
-        
+from collections import deque
+
+
+path1 = dijkstra(1,musts[0]) + dijkstra(musts[0],musts[1]) + dijkstra(musts[1],n)
+path2 = dijkstra(1,musts[1]) + dijkstra(musts[1],musts[0]) + dijkstra(musts[0],n)
+
+if path1 >= 800001 and path2>=800001:
+    print(-1)
+else:
+    print(min(path1,path2))
