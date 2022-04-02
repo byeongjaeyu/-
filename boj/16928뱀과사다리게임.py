@@ -23,13 +23,13 @@ def bfs():
                 visited[p2] = visited[p] + 1
                 a = ladders.get(p2)
                 b = snakes.get(p2)
-                if a:
+                if a and not visited[a]:
                     visited[a] = visited[p2]
                     q.append(a)
-                elif b:
+                elif b and not visited[b]:
                     visited[b] = visited[p2]
                     q.append(b)
-                else:
+                elif not a and not b:
                     q.append(p2)
 
 q = deque()
