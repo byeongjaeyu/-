@@ -1,4 +1,6 @@
 from sys import stdin
+from sys import setrecursionlimit
+setrecursionlimit(10**6)
 input = stdin.readline
 n = int(input())
 uv_lst = [[] for _ in range(n+1)]
