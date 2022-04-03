@@ -34,4 +34,4 @@ for i in range(len(s)):
         ans.append(s[i])
 while stack:
     ans.append(stack.pop(-1))
-print(''.join(map(str,ans)))
+print(ans)
