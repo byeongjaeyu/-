@@ -16,3 +16,12 @@
 # lst = list(map(lambda x: x*100000000,lst))
 
 # print("time2 : ", time.time() - start)
+
+lst = [1,2,3,4,5]
+lst[2:4] = [10,11]
+print(lst)
+print(' ')
+print(" ")
+
+print(' '==None)
+print(" "==None)
