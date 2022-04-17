@@ -8,7 +8,6 @@ for i in range(m):
     ef_lst[e].append(f)
 
 fe_cnt_lst = [len(fe_lst[i]) for i in range(n+1)]
-print(fe_cnt_lst)
 
 from heapq import heappop,heappush
 q = []
